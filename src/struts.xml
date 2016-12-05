@@ -15,7 +15,7 @@
 	<constant name="struts.devMode" value="true"></constant>
 	
 	<!-- 配置Convention插件自动重加载映射 -->
-	<constant name="struts.convention.classes.reload" value="true"></constant>
+	<!-- <constant name="struts.convention.classes.reload" value="true"></constant> -->
 	
 	<!-- 设置允许OGNL访问静态成员 -->
 	<constant name="struts.ognl.allowStaticMethodAccess" value="true"/>
@@ -63,5 +63,18 @@
       <result>.</result>
     </action>
   </package> -->
-	
+  
+  <package name="xiaoming" extends="struts-default">
+    <action name="loginResult" class="com.xiaoming.action.Login">
+      <result name="input">/WEB-INF/content/login.jsp</result>
+	  <result name="success">/WEB-INF/content/login-success.jsp</result>
+	  <result name="error">/WEB-INF/content/login-error.jsp</result>
+    </action>
+    
+    <action name="*">
+      <result>/WEB-INF/content/{1}.jsp</result>
+    </action>
+  
+  </package>
+
 </struts>
