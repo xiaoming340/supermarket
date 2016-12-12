@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 指定Hibernate映射文件的DTD信息 -->
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+	
+<!-- Hibernate映射文件的根元素 -->
+<hibernate-mapping package="com.xiaoming.domain">
+	<class name="Goods" table="goods">
+		<cache usage="read-write"/>
+		
+		<!-- 映射标识属性 -->
+		<id	name="id" type="integer" column="id">
+			<!-- 指定使用identity主键生成策略 -->
+			<generator class="identity"/>
+		</id>
+		
+		<property name="name" column="name" type="string" length="100"/>
+		<property name="quantity" column="quantity" type="integer"/>
+		<property name="price" column="price" type="big_decimal"/>
+		<property name="inPrice" column="in_price" type="big_decimal"/>
+		<property name="productDate" column="product_date" type="date"/>
+		<property name="shelfLife" column="shelf_life" type="integer"/>
+		<property name="description" column="description" type="string" length="50"/>
+		
+	</class>
+</hibernate-mapping>

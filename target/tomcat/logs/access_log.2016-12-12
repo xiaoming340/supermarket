@@ -1,0 +1,3 @@
+0:0:0:0:0:0:0:1 - - [12/Dec/2016:15:49:08 +0800] "GET /Supermarket/purchaseManage.action HTTP/1.1" 200 2857 http-bio-8080-exec-1 1321
+0:0:0:0:0:0:0:1 - - [12/Dec/2016:15:49:08 +0800] "GET /Supermarket/images/purchase.css HTTP/1.1" 304 - http-bio-8080-exec-2 7
+0:0:0:0:0:0:0:1 - - [12/Dec/2016:15:49:08 +0800] "GET /Supermarket/images/bodybg.jpg HTTP/1.1" 304 - http-bio-8080-exec-3 4
