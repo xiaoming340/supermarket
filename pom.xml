@@ -42,9 +42,14 @@
       <artifactId>slf4j-log4j12</artifactId>
       <version>1.7.7</version>
     </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.1.8</version>
+    </dependency>
     
     <!-- *********** jstl *********** -->
-    <!-- <dependency>
+    <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>jstl</artifactId>
       <version>1.2</version>
@@ -54,7 +59,15 @@
       <artifactId>jsp-api</artifactId>
       <version>2.2.1-b03</version>
       <scope>provided</scope>
-    </dependency> -->
+    </dependency>
+    
+    <!-- *********** servlet *********** -->
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+      <version>2.5</version>
+      <scope>provided</scope>
+    </dependency>
     
     <!-- *********** aspectj *********** -->
     <!-- <dependency>
@@ -67,14 +80,6 @@
       <artifactId>aspectjweaver</artifactId>
       <version>1.8.9</version>
     </dependency>
-    
-    <!-- *********** servlet *********** -->
-    <!-- <dependency>
-      <groupId>javax.servlet</groupId>
-      <artifactId>servlet-api</artifactId>
-      <version>2.5</version>
-      <scope>provided</scope>
-    </dependency> -->
     
     <!-- *********** junit *********** -->
     <dependency>
@@ -222,15 +227,15 @@
         <groupId>org.apache.tomcat.maven</groupId>
         <artifactId>tomcat7-maven-plugin</artifactId>
         <version>2.2</version>
-        <executions>
+        <!-- <executions>
           <execution>
-            <!-- 在打包成功后使用tomcat:run来运行服务 -->
+            在打包成功后使用tomcat:run来运行服务
             <phase>package</phase>
             <goals>
               <goal>run</goal>
             </goals>
           </execution>
-        </executions>
+        </executions> -->
         <configuration>
           <path>/Supermarket</path>
         </configuration>
